@@ -1,7 +1,11 @@
 package card;
 
 import java.util.Scanner;
-
+/*
+Name: Harsh Barot
+Student id : 991775979
+Date : 27-05-2025
+ */
 public class CardTrick {
 
     public static void main(String[] args) {
@@ -25,7 +29,7 @@ public class CardTrick {
         System.out.print("Enter suit number (1-4): ");
         int suitNum = k.nextInt();
 
-        while (suitNum < 1 || suitNum > 4) {
+      while (suitNum < 1 || suitNum > 4) {
             System.out.print("Invalid input. Enter a number between 1 and 4: ");
             suitNum = k.nextInt();
         }
@@ -48,9 +52,14 @@ public class CardTrick {
         }
 
         if (i < magicHand.length) {
-            System.out.println("\nYou're card is in the magic hand!");
+            System.out.println("\nCongrats your card is in the magic hand!");
         } else {
-            System.out.println("\nYou're card was not found in the magic hand.");
+            System.out.println("\Sorry your card was not found in the magic hand.");
+        }
+
+        if (userCard.getValue() == luckyCard.getValue()
+                && userCard.getSuit().equalsIgnoreCase(luckyCard.getSuit())) {
+            System.out.println("You picked the lucky card: 2 of Clubs!");
         }
     }
 }
